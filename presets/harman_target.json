@@ -1,0 +1,42 @@
+{
+  "name": "Harman In-Ear Target",
+  "description": "Harman 2019 target curve with smooth sub-bass shelf, natural midrange, and clear pinna gain",
+  "globalGain": -1.5,
+  "bands": [
+    {
+      "position": 0,
+      "frequency": 40,
+      "gain": 4.5,
+      "qValue": 0.7,
+      "filterType": 1
+    },
+    {
+      "position": 1,
+      "frequency": 120,
+      "gain": 2.0,
+      "qValue": 0.9,
+      "filterType": 0
+    },
+    {
+      "position": 2,
+      "frequency": 800,
+      "gain": -1.0,
+      "qValue": 1.4,
+      "filterType": 0
+    },
+    {
+      "position": 3,
+      "frequency": 3000,
+      "gain": 3.0,
+      "qValue": 1.2,
+      "filterType": 0
+    },
+    {
+      "position": 4,
+      "frequency": 10000,
+      "gain": 2.0,
+      "qValue": 0.7,
+      "filterType": 2
+    }
+  ]
+}

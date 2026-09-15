@@ -1,0 +1,42 @@
+{
+  "name": "Bass Boost (+6dB)",
+  "description": "Deep, rumbling sub-bass and heavy punch for bassheads and EDM",
+  "globalGain": -3.0,
+  "bands": [
+    {
+      "position": 0,
+      "frequency": 60,
+      "gain": 6.0,
+      "qValue": 0.7,
+      "filterType": 1
+    },
+    {
+      "position": 1,
+      "frequency": 150,
+      "gain": 3.5,
+      "qValue": 0.9,
+      "filterType": 0
+    },
+    {
+      "position": 2,
+      "frequency": 1000,
+      "gain": 0.0,
+      "qValue": 1.0,
+      "filterType": 0
+    },
+    {
+      "position": 3,
+      "frequency": 4500,
+      "gain": 1.0,
+      "qValue": 1.2,
+      "filterType": 0
+    },
+    {
+      "position": 4,
+      "frequency": 10000,
+      "gain": 1.5,
+      "qValue": 0.7,
+      "filterType": 2
+    }
+  ]
+}

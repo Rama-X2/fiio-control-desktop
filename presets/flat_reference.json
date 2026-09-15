@@ -1,0 +1,42 @@
+{
+  "name": "Flat Reference (Neutral)",
+  "description": "Bit-perfect neutral frequency response with zero coloration",
+  "globalGain": 0.0,
+  "bands": [
+    {
+      "position": 0,
+      "frequency": 50,
+      "gain": 0.0,
+      "qValue": 0.7,
+      "filterType": 0
+    },
+    {
+      "position": 1,
+      "frequency": 200,
+      "gain": 0.0,
+      "qValue": 1.0,
+      "filterType": 0
+    },
+    {
+      "position": 2,
+      "frequency": 1000,
+      "gain": 0.0,
+      "qValue": 1.0,
+      "filterType": 0
+    },
+    {
+      "position": 3,
+      "frequency": 4000,
+      "gain": 0.0,
+      "qValue": 1.0,
+      "filterType": 0
+    },
+    {
+      "position": 4,
+      "frequency": 10000,
+      "gain": 0.0,
+      "qValue": 0.7,
+      "filterType": 0
+    }
+  ]
+}

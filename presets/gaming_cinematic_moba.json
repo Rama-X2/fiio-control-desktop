@@ -1,0 +1,42 @@
+{
+  "name": "Gaming Cinematic & MOBA",
+  "description": "Spacious soundstage, deep atmospheric bass, and crystal clear voice communications",
+  "globalGain": -1.0,
+  "bands": [
+    {
+      "position": 0,
+      "frequency": 65,
+      "gain": 4.0,
+      "qValue": 0.8,
+      "filterType": 1
+    },
+    {
+      "position": 1,
+      "frequency": 300,
+      "gain": 1.0,
+      "qValue": 1.0,
+      "filterType": 0
+    },
+    {
+      "position": 2,
+      "frequency": 1500,
+      "gain": 1.5,
+      "qValue": 1.2,
+      "filterType": 0
+    },
+    {
+      "position": 3,
+      "frequency": 3500,
+      "gain": 2.5,
+      "qValue": 1.1,
+      "filterType": 0
+    },
+    {
+      "position": 4,
+      "frequency": 11000,
+      "gain": 3.0,
+      "qValue": 0.7,
+      "filterType": 2
+    }
+  ]
+}

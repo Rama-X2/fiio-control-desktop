@@ -1,0 +1,81 @@
+{
+  "name": "fiio-control-desktop",
+  "version": "1.0.0",
+  "description": "FiiO Control Desktop Windows (x64 & 32-bit) with Auto-Connect, Offline PEQ Studio, Local Presets, and System Tray Quick Control",
+  "main": "src/main.js",
+  "author": "Rama Armytha (Rama-X2) <https://github.com/Rama-X2>",
+  "homepage": "https://github.com/Rama-X2/fiio-control-desktop",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rama-X2/fiio-control-desktop.git"
+  },
+  "keywords": [
+    "fiio",
+    "jadeaudio",
+    "fiio-control",
+    "equalizer",
+    "peq",
+    "dac",
+    "ja11",
+    "ka17",
+    "ka15",
+    "btr17",
+    "portable",
+    "windows",
+    "offline"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "build:portable-x64": "node scripts/build-portable-x64.js",
+    "build:portable-ia32": "node scripts/build-portable-ia32.js",
+    "build:portable-all": "node scripts/build-all.js",
+    "build:installer-x64": "electron-builder --win nsis --x64",
+    "build:installer-ia32": "electron-builder --win nsis --ia32",
+    "build:installer-all": "electron-builder --win nsis --x64 --ia32",
+    "build:all": "node scripts/build-all.js"
+  },
+  "build": {
+    "appId": "com.ramax2.fiiocontrol",
+    "productName": "FiiO Control",
+    "artifactName": "${productName}-Setup-${version}-${arch}.${ext}",
+    "directories": {
+      "output": "dist/installers"
+    },
+    "win": {
+      "icon": "assets/app_icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FiiO Control",
+      "installerIcon": "assets/app_icon.ico",
+      "uninstallerIcon": "assets/app_icon.ico"
+    },
+    "files": [
+      "src/**/*",
+      "presets/**/*",
+      "assets/**/*",
+      "web_offline/**/*",
+      "package.json",
+      "LICENSE",
+      "README.md"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^31.4.0",
+    "electron-builder": "^26.15.3",
+    "electron-packager": "^17.1.2"
+  }
+}

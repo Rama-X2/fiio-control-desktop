@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FiiO Quick Control</title>
+  <link rel="stylesheet" href="quick_control.css">
+</head>
+<body>
+  <div class="flyout-container">
+    <!-- Header -->
+    <div class="flyout-header">
+      <div class="brand">
+        <span class="brand-logo">FIIO</span>
+        <span class="brand-sub">QUICK CONTROL</span>
+      </div>
+      <div class="header-actions">
+        <button id="btnOpenMain" title="Open Full Studio">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        </button>
+        <button id="btnCloseFlyout" title="Minimize to Tray">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Device Connection Status Banner -->
+    <div class="device-card">
+      <div class="device-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+      </div>
+      <div class="device-info">
+        <div class="device-status-row">
+          <span id="statusDot" class="status-dot online"></span>
+          <span id="statusText" class="status-text">Connected</span>
+        </div>
+        <div id="deviceName" class="device-name">JadeAudio JA11</div>
+      </div>
+      <button id="btnReconnect" class="btn-icon" title="Scan / Auto Reconnect">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+      </button>
+    </div>
+
+    <!-- Quick EQ Switch -->
+    <div class="control-row">
+      <div class="control-label">
+        <span class="label-title">Equalizer (PEQ)</span>
+        <span class="label-desc" id="eqStateDesc">DSP Active</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="toggleEq" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- Preset Selector -->
+    <div class="control-section">
+      <div class="section-header">
+        <span class="section-title">Sound Profile / Preset</span>
+        <span id="activePresetBadge" class="preset-badge">Harman</span>
+      </div>
+      <div class="preset-select-wrapper">
+        <select id="presetDropdown" class="preset-dropdown">
+          <option value="harman_target">Harman In-Ear Target</option>
+          <option value="bass_boost_plus_3db">Bass Boost (+3dB)</option>
+          <option value="bass_boost_plus_6db">Bass Boost (+6dB)</option>
+          <option value="gaming_fps_footsteps">Gaming FPS (Footsteps CS/Valo)</option>
+          <option value="gaming_cinematic_moba">Gaming MOBA & Cinema</option>
+          <option value="vocal_clarity">Vocal Clarity & Acoustic</option>
+          <option value="treble_air_sparkle">Treble Air & Micro-Details</option>
+          <option value="rock_dynamic">Rock & Metal Punch</option>
+          <option value="flat_reference">Flat Reference (Neutral)</option>
+        </select>
+      </div>
+
+      <!-- Quick Pill Buttons for top profiles -->
+      <div class="preset-pills">
+        <button class="pill active" data-preset="harman_target">Harman</button>
+        <button class="pill" data-preset="bass_boost_plus_3db">Bass +3dB</button>
+        <button class="pill" data-preset="gaming_fps_footsteps">FPS Footsteps</button>
+        <button class="pill" data-preset="flat_reference">Flat</button>
+      </div>
+    </div>
+
+    <!-- Global Gain Slider -->
+    <div class="control-section">
+      <div class="gain-header">
+        <span class="section-title">Global Gain</span>
+        <span id="gainValue" class="gain-value">0.0 dB</span>
+      </div>
+      <div class="gain-slider-container">
+        <span class="gain-min">-12 dB</span>
+        <input type="range" id="gainSlider" min="-12" max="12" step="0.5" value="0">
+        <span class="gain-max">+12 dB</span>
+      </div>
+    </div>
+
+    <!-- Quick Footer Actions -->
+    <div class="flyout-footer">
+      <button id="btnFullStudio" class="btn-primary">
+        <span>Open FiiO Studio</span>
+        <span class="arrow">&rarr;</span>
+      </button>
+      <div class="footer-sub-links">
+        <a href="#" id="linkSavePreset">Save Current</a>
+        <span class="divider">•</span>
+        <a href="#" id="linkOpenFolder">Presets Folder</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="quick_control.js"></script>
+</body>
+</html>
